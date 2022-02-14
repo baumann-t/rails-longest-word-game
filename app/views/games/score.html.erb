@@ -1,0 +1,10 @@
+<h1>RESULTS:</h1>
+<p><%= @result %></p>
+<p>Your total score: <%= @total_score %></p>
+<div style="display: flex">
+  <%= link_to "PLAY AGAIN", new_path %>
+  <form action="/reset" method="post">
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <input type="submit" name="reset_score", value="Reset Score!">
+  </form>
+</div>
